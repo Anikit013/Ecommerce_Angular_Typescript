@@ -1,0 +1,115 @@
+<!-- <h2 contextmenu="center">Products</h2> -->
+
+<app-header1></app-header1>
+
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<div class="container">
+<!-- <div class="col-xs-12 col-md-6"> -->
+    <tr *ngFor="let com of lstcomments">
+                <!-- First product box start here-->
+                <div class="prod-info-main prod-wrap clearfix" *ngIf="searchText === '' || com.productname.toLowerCase().includes(searchText)">
+ 
+                      <div class="row">
+ 
+                           <div class="col-md-5 col-sm-30 col-xs-12">
+ 
+                            <div class="product-image">
+ 
+                             <img src="{{com.productimage}}" height="200" width="200" class="img-responsive">
+ 
+ 
+                       </div>
+ 
+                  </div>
+ 
+     <div class="col-md-7 col-sm-12 col-xs-12">
+ 
+                  <div class="product-deatil">
+ 
+                               <h5 class="name">
+ 
+                               <a href="#">
+ 
+{{com.productname}}
+ 
+                               </a>
+ 
+                               <a href="#">
+ 
+                               <span>    </span>
+ 
+                               </a>                           
+ 
+                        </h5>
+ 
+                            <p class="price-container">
+ 
+                             <span>
+
+                                {{com.productprice}}
+                             </span>
+ 
+                           </p>
+ 
+              <span class="tag1"></span>
+ 
+   </div>
+ 
+   <div class="description">
+ 
+      <p>{{com.productdescription}}</p>
+ 
+   </div>
+ 
+      <div class="product-info smart-form">
+ 
+         <div class="row">
+ 
+         <div class="col-md-12">
+ 
+          <a href="#" class="btn btn-danger" routerLink="/cart">Add to cart</a>
+ 
+           
+ 
+       </div>
+ 
+      <div class="col-md-12">
+ 
+        
+ 
+          <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
+ 
+          <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
+ 
+          <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
+ 
+          <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
+ 
+          <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
+ 
+         </div>
+ 
+       </div>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+  </div>
+ </div>
+ 
+ <!-- end product -->
+ 
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+

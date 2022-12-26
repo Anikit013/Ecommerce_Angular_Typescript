@@ -1,0 +1,33 @@
+<<app-header></app-header>
+<div class="account section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="login-form border p-5"> 
+          <div class="text-center heading">
+            <h2 class="mb-2">Login</h2>
+            <p class="lead">Don’t have an account? <a routerLink="/signup">Create an account</a></p>
+          </div>
+
+          <form #loginForm="ngForm" (ngSubmit)="LoginUser()" >
+            <small class="text-danger">{{msg}}</small>
+            <div class="form-group mb-4">
+              <label for="#">Email Address</label>
+              <input  type="email"  class="form-control" placeholder="UserName" name="Email" [(ngModel)]="user1.email" required #email="ngModel"
+              [class.is-invalid]="email.invalid || email.touched">
+              <!-- <small class="text-danger"[class.d.none]="email.invalid && email.touched"> Enter valid Email address</small> -->
+            </div>
+            <div class="form-group">
+              <label for="#">Password</label>
+              <input type="password" required class="form-control" placeholder="Password" name="password" [(ngModel)]="user1.password" required #password="ngModel"
+              [class.is-invalid]="password.invalid || password.touched">
+              <!-- <small class="text-danger"[class.d.none]="password.invalid && password.touched"> Enter valid password address</small> -->
+            </div>
+            <a class="btn btn-main mt-3 btn-block" type="submit" (click)="LoginUser()" >Login</a>
+          </form>
+         </div> 
+      </div>
+    </div>
+  </div>
+</div>
+

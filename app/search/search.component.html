@@ -1,0 +1,26 @@
+<!-- <div class="search-container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      
+        <div class="text-center heading">
+           <form #SearchForm="ngForm" (ngSubmit)="Search()">
+          <div class="input-group">
+<input type="text" class="form-control rounded" placeholder="Search the Product here" aria-label="Search" aria-describedby="search-addon" />
+<button type="button" type="submit" (click)="Search()" class="btn btn-outline-danger">Search</button>
+
+</div>
+</form>
+</div>
+</div>
+</div>
+</div> -->
+
+
+<div class="search-container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+  <span></span>
+  <input type="text" class="form-control rounded" placeholder="Search the Product here" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="enteredsearchvalue" (input)="onsearchTextChanged()">
+</div>
+</div>
+</div>
