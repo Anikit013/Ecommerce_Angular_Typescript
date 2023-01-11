@@ -16,7 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsecondComponent } from './productsecond/productsecond.component';
 import { ProductthirdComponent } from './productthird/productthird.component';
-import { ProductforthComponent } from './productforth/productforth.component';
+
 
 
 
@@ -39,7 +39,6 @@ const routes: Routes =[
   { path:"productsingle", component:ProductsingleComponent},
   { path:"shop", component:ShopComponent},
   { path:"signup", component:SignupComponent},
-  { path :"products", component:ProductsComponent}
   ];
 
 @NgModule({
